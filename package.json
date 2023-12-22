@@ -1,0 +1,32 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "Baxture nodeJs assignment",
+  "main": "dist/index.js",
+  "scripts": {
+    "start:dev": "nodemon index.js",
+    "start:prod": "npm run build && node dist/index.js",
+    "build": "babel . -d dist",
+    "start": "npm run start:dev",
+    "test": "mocha",
+    "start:multi": "npm run start:prod && npm run start:cluster",
+    "start:cluster": "node cluster.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "http-proxy": "^1.18.1",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.4",
+    "@babel/core": "^7.23.6",
+    "@babel/preset-env": "^7.23.6",
+    "mocha": "^10.2.0",
+    "nodemon": "^2.0.22",
+    "typescript": "^4.9.5"
+  }
+}
